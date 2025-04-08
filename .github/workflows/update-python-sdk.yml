@@ -8,7 +8,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+   contents: write
+  workflows: write
 
 jobs:
   update_csharp_sdk:
