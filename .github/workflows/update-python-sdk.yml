@@ -1,13 +1,14 @@
-name: Update python SDK
+name: Update python-sdk SDK
 
 on:
+  # Запускатися раз на тиждень (у неділю о 00:00 за UTC)
   schedule:
     - cron: '0 0 * * 0'
+  # Додатково, щоб мати можливість запустити вручну
   workflow_dispatch:
 
 permissions:
   contents: write
-  workflows: write
 
 jobs:
   update_python_sdk:
@@ -16,29 +17,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      # 1. Спочатку конфігуруємо Git і підтягуємо зміни
-      - name: Pull latest changes
-        run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
-          git pull --rebase origin main
-
-      # 2. Тепер завантажуємо архів
-      - name: Download python.tgz
+      - name: Download csharp.tgz
         run: |
           curl -L -o python.tgz https://app.api2cart.com/sdk/openapi/python.tgz
 
-      # 3. Розпаковуємо
+      # Розпаковуємо, видаляючи 1 рівень (папку csharp)
       - name: Extract python.tgz
         run: |
           tar -xzf python.tgz --strip-components=1
 
-      # 4. Додаємо зміни, комітимо і пушимо
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
           git add .
-          git diff-index --quiet HEAD || git commit -m "Update python SDK [skip ci]"
-          git push origin HEAD:main
+          git diff-index --quiet HEAD || git commit -m "Update scala SDK [skip ci]"
+          git push
