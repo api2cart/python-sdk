@@ -1,10 +1,10 @@
 name: Update python-sdk SDK
 
 on:
-  # Запускатися раз на тиждень (у неділю о 00:00 за UTC)
+  # Г‡Г ГЇГіГ±ГЄГ ГІГЁГ±Гї Г°Г Г§ Г­Г  ГІГЁГ¦Г¤ГҐГ­Гј (Гі Г­ГҐГ¤ВіГ«Гѕ Г® 00:00 Г§Г  UTC)
   schedule:
     - cron: '0 0 * * 0'
-  # Додатково, щоб мати можливість запустити вручну
+  # Г„Г®Г¤Г ГІГЄГ®ГўГ®, Г№Г®ГЎ Г¬Г ГІГЁ Г¬Г®Г¦Г«ГЁГўВіГ±ГІГј Г§Г ГЇГіГ±ГІГЁГІГЁ ГўГ°ГіГ·Г­Гі
   workflow_dispatch:
 
 permissions:
@@ -21,11 +21,6 @@ jobs:
       - name: Download csharp.tgz
         run: |
           curl -L -o python.tgz https://app.api2cart.com/sdk/openapi/python.tgz
-
-      # Розпаковуємо, видаляючи 1 рівень (папку csharp)
-      - name: Extract python.tgz
-        run: |
-          tar -xzf python.tgz --strip-components=1
 
       - name: Commit changes
         run: |
