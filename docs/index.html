@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API2Cart Python SDK — Integration Overview</title>
+
+    <!-- Example Google Font (Open Sans) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Inline styles mimicking API2Cart-like design -->
+    <style>
+        /* Base reset / setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        body {
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2abd68; /* Primary accent color (green) */
+        }
+
+        /* Header (Navigation Bar) */
+        header {
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        /* Logo or Title */
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2abd68;
+        }
+
+        .nav-links ul {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+            .nav-links a:hover {
+                color: #2abd68;
+            }
+
+        /* Hero / Intro Section */
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: #333;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                max-width: 600px;
+                margin: 0 auto 1.5rem;
+                color: #555;
+            }
+
+        /* CTA Button (shared style) */
+        .cta-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            background: #2abd68;
+            color: #fff;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin: 0.5rem 0.25rem; /* small spacing if we have multiple buttons */
+        }
+
+            .cta-btn:hover {
+                background: #279a58;
+            }
+
+        /* Main content area */
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+            section h2 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 1rem;
+            }
+
+            section p {
+                margin-bottom: 1rem;
+                color: #555;
+            }
+
+        .benefits-list {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+
+            .benefits-list li {
+                margin-bottom: 0.5rem;
+            }
+
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            overflow: auto;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+            text-align: center;
+            padding: 1rem;
+        }
+
+            footer p {
+                color: #777;
+            }
+
+        /* Media queries for responsiveness */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">API2Cart Python SDK</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#description">Overview</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#quickstart">Quick Start</a></li>
+                <li><a href="#docs">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>API2Cart Python SDK for eCommerce Integration</h1>
+        <p>
+            Leverage the power of Python for seamless integration with multiple eCommerce platforms through API2Cart.
+        </p>
+        <a href="https://api2cart.com/book-a-demo/?utm_source=github&utm_medium=referral&utm_campaign=python-sdk"
+           class="cta-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+            Book a Demo
+        </a>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- Section 1: Description -->
+        <section id="description">
+            <h2>Overview</h2>
+            <p>
+                The <strong>API2Cart Python SDK</strong> provides a unified API to interact with multiple eCommerce platforms,
+                including Shopify, WooCommerce, Magento, PrestaShop, BigCommerce, and more. This SDK simplifies managing products,
+                orders, customers, and other eCommerce data across different platforms using Python.
+            </p>
+            <p>
+                Python’s simplicity and versatility make it an ideal language for working with API2Cart’s powerful platform, enabling
+                developers to automate workflows, retrieve data, and interact with eCommerce platforms easily.
+            </p>
+        </section>
+
+        <!-- Section 2: Benefits -->
+        <section style="background: #fafafa; padding: 2rem;" id="benefits">
+            <h2>Key Benefits</h2>
+            <ul class="benefits-list">
+                <li><strong>Unified API Access:</strong> Access multiple eCommerce platforms via a single API endpoint.</li>
+                <li><strong>Power of Python:</strong> Simplify integration with Python’s easy-to-use syntax.</li>
+                <li><strong>Efficient Data Management:</strong> Retrieve and manage products, orders, and customers effortlessly.</li>
+                <li><strong>Automation:</strong> Automate eCommerce workflows and enhance your development process.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Quick Start (Code Example) -->
+        <section id="quickstart">
+            <h2>Quick Start</h2>
+            <p>
+                Below is a simple Python example using the `requests` library to make a GET request to the API2Cart status endpoint.
+                Replace the placeholder values with your actual API key.
+            </p>
+            <pre><code>import requests
+
+api_key = "YOUR_API2CART_KEY"
+url = f"https://api.api2cart.com/v1.0/status?api_key={api_key}"
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    print(f"Response: {response.json()}")
+else:
+    print("Error: Unable to fetch data")
+</code></pre>
+            <p>
+                This Python example demonstrates how to use the **`requests`** library to make a GET request to the **API2Cart status endpoint**.
+                You can modify this example to retrieve other types of data, such as orders, products, and customer information.
+            </p>
+        </section>
+
+        <!-- Section 4: Documentation -->
+        <section id="docs">
+            <h2>Documentation</h2>
+            <p>
+                For more details on how to integrate the API2Cart Python SDK, check the full
+                <a href="https://api2cart.com/docs/?utm_source=github&utm_medium=referral&utm_campaign=python-sdk"
+                   target="_blank" rel="noopener noreferrer">API2Cart Documentation</a>.
+            </p>
+            <p>
+                You can also visit our <a href="https://github.com/api2cart" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+                for more code examples and SDK updates.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 API2Cart. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
