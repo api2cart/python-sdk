@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>API2Cart Python SDK — Integration Overview</title>
+    <title>API2Cart Python SDK â€” Integration Overview</title>
 
-    <!-- Example Google Font (Open Sans) -->
+    <!-- Google Font (Open Sans) -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- Inline styles mimicking API2Cart-like design -->
+    <!-- Inline Styles for API2Cart-like design -->
     <style>
-        /* Base reset / setup */
+        /* Base Reset and Setup */
         * {
             margin: 0;
             padding: 0;
@@ -23,11 +23,13 @@
             color: #333;
             background-color: #fff;
             line-height: 1.6;
+            font-size: 16px;
+            padding-top: 20px;
         }
 
         a {
             text-decoration: none;
-            color: #2abd68; /* Primary accent color (green) */
+            color: #2abd68; /* Primary Accent Color */
         }
 
         /* Header (Navigation Bar) */
@@ -41,104 +43,109 @@
             padding: 1rem 2rem;
         }
 
-        /* Logo or Title */
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: #2abd68;
         }
 
         .nav-links ul {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .nav-links a {
             color: #333;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.2s ease;
         }
 
-            .nav-links a:hover {
-                color: #2abd68;
-            }
+        .nav-links a:hover {
+            color: #2abd68;
+        }
 
         /* Hero / Intro Section */
         .hero {
             text-align: center;
-            padding: 3rem 2rem 2rem;
+            padding: 4rem 2rem;
             background: #fafafa;
             border-bottom: 1px solid #eee;
         }
 
-            .hero h1 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-                color: #333;
-            }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
 
-            .hero p {
-                font-size: 1.1rem;
-                max-width: 600px;
-                margin: 0 auto 1.5rem;
-                color: #555;
-            }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            color: #555;
+        }
 
-        /* CTA Button (shared style) */
         .cta-btn {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2rem;
             border-radius: 4px;
             background: #2abd68;
             color: #fff;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: background 0.3s ease;
-            margin: 0.5rem 0.25rem; /* small spacing if we have multiple buttons */
+            margin: 0.75rem 0;
         }
 
-            .cta-btn:hover {
-                background: #279a58;
-            }
+        .cta-btn:hover {
+            background: #279a58;
+        }
 
-        /* Main content area */
+        /* Main Content */
         main {
-            padding: 2rem 1rem;
+            padding: 3rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Sections */
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
-            section h2 {
-                font-size: 1.5rem;
-                color: #333;
-                margin-bottom: 1rem;
-            }
+        section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
 
-            section p {
-                margin-bottom: 1rem;
-                color: #555;
-            }
+        section p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.125rem;
+        }
 
         .benefits-list {
             list-style: disc;
             padding-left: 1.5rem;
         }
 
-            .benefits-list li {
-                margin-bottom: 0.5rem;
-            }
+        .benefits-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
 
         pre {
             background: #f5f5f5;
-            padding: 1rem;
+            padding: 1.25rem;
             overflow: auto;
             border-radius: 4px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
         }
 
         /* Footer */
@@ -146,21 +153,30 @@
             background: #f9f9f9;
             border-top: 1px solid #eee;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem 1rem;
         }
 
-            footer p {
-                color: #777;
-            }
+        footer p {
+            color: #777;
+            font-size: 0.875rem;
+        }
 
-        /* Media queries for responsiveness */
+        /* Media Queries for Responsiveness */
         @media (min-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 3rem;
             }
 
             .hero p {
-                font-size: 1.125rem;
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta-btn {
+                padding: 1rem 2.5rem;
             }
         }
     </style>
@@ -211,7 +227,7 @@
         </section>
 
         <!-- Section 2: Benefits -->
-        <section style="background: #fafafa; padding: 2rem;" id="benefits">
+        <section style="background: #fafafa;" id="benefits">
             <h2>Key Benefits</h2>
             <ul class="benefits-list">
                 <li><strong>Unified API Access:</strong> Access multiple eCommerce platforms via a single API endpoint.</li>
@@ -221,7 +237,7 @@
             </ul>
         </section>
 
-        <!-- Section 3: Quick Start (Code Example) -->
+        <!-- Section 3: Quick Start -->
         <section id="quickstart">
             <h2>Quick Start</h2>
             <p>
@@ -240,10 +256,6 @@ if response.status_code == 200:
 else:
     print("Error: Unable to fetch data")
 </code></pre>
-            <p>
-                This Python example demonstrates how to use the **`requests`** library to make a GET request to the **API2Cart status endpoint**.
-                You can modify this example to retrieve other types of data, such as orders, products, and customer information.
-            </p>
         </section>
 
         <!-- Section 4: Documentation -->
